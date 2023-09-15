@@ -1,7 +1,7 @@
 # de_dust2_scene
 A de_dust2 bombsite scene! Made by Three.js
 
-![Image text]https://github.com/1832051637/de_dust2_scene/blob/main/dust2_screenshot.png
+![Image text](https://github.com/1832051637/de_dust2_scene/blob/main/dust2_screenshot.png)
 
 ## Install && Run
 First Install three.js-master, then run wbserver.bat.
