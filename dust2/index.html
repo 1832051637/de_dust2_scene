@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="shortcut icon" href="#">
+		<title>de_dust2</title>
+		<style>
+			label {
+				display: inline-block;
+				width: 60%;
+			}
+
+			input {
+				width: 13%;
+			}
+
+			@font-face {
+				font-family: 'Comic Sans MS';
+				src: url(fonts/ComicSansMS3.ttf);
+			}
+
+			body {
+				background-color: #272727;
+				color: rgb(255, 255, 255);
+				/* margin: auto; */
+				/* padding-left: 9%; */
+				font-family: cursive;
+				font-weight: 900;
+				font-style: normal;
+				font-size: 21px;
+				
+			}
+
+			#blocker {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0,0,0,0.5);
+			}
+
+			#instructions {
+				width: 100%;
+				height: 100%;
+
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+
+				text-align: center;
+				font-size: 14px;
+				cursor: pointer;
+			}
+			canvas{
+				
+				display: block;
+				margin: auto;
+			}
+			p {
+				text-align: center;
+				font-weight: 900;
+				font-style: normal;
+				font-size: 21px;
+			}
+
+			button {
+				background-color: chocolate;
+			}
+		</style>
+
+        
+		
+		
+	</head>
+	<body style="text-align:center;"
+		  onload="main()">
+		<p style="color:darkorange"> README: Default mode is the <span style="color:#00FF00">Orbit Control Camera</span>, please use buttons to <span style="color:#00FF00">switch cameras</span></p>
+		<p style="color:rgb(192, 192, 192)"> This is a map scene of the <span style="color:darkorange"> de_dust2 BombSite A </span> from CS 1.6</p>
+		  <div id="blocker">
+			<div id="instructions">
+				<p style="font-size:36px"
+					>
+					Click to play
+				</p>
+				<p>
+					Default if Orbit Control. If using FREE ROAM MODE:<br/>
+					Move: WASD<br/>
+					<!-- Jump: SPACE<br/> -->
+					Look: MOUSE
+				</p>
+			</div>
+		</div>
+		<script type="text/javascript" src="./lib/three.js" ></script>
+		<script type="text/javascript" src="./lib/OrbitControls.js" ></script>
+		<script type="text/javascript" src="./lib/GLTFLoader.js" ></script>
+		<script type="text/javascript" src="./lib/FontLoader.js" ></script>
+		<script type="text/javascript" src="./lib/PointerLockControls.js" ></script>
+		<script type="text/javascript" src="./lib/TextGeometry.js" ></script>
+		<script type="text/javascript" src="make_labels.js" ></script>
+        <script type="text/javascript" src="InputEvents.js"></script>
+		<script type="text/javascript" src="map_objects.js"></script>
+		<script type="text/javascript" src="Player.js" ></script>
+		<script type="text/javascript" src="Light.js" ></script>
+		<!-- <script type="text/javascript" src="Camera.js" ></script> -->
+		<script src="demo.js" ></script>
+		<p style="color:darkorange"> <span style="color:#00FF00">Using lights: </span>ambient light, spot light, and point light</p>
+		<p style="color:darkorange"> <span style="color:#00FF00">Extra Work for A:</span> 1. Some fog...  2. Some shadow...  3. Some billboards...</p>
+		Choose Camera Control Mode: <button type="button" id="orbit">Orbit Control Camera</button>     <button type="button" id="free">Free Roam Camera</button>
+
+		
+	</body>
+    
+</html>
